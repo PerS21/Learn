@@ -42,14 +42,10 @@ function deepEqual(obj1, obj2) {
             return false;
         }
     }
-    console.log("asd")
-    // return keysObj1.every((key)=>deepEqual(obj1[key], obj2[key]));
+    return keysObj1.every((key)=>{
+        return deepEqual(obj1[key], obj2[key]);
+    });
 
 }
 
 console.log(deepEqual(a, b))
-
-// console.log(res)
-
-// deepEqual(a, b);
-// console.log(res)
