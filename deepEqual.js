@@ -42,7 +42,8 @@ function deepEqual(obj1, obj2) {
             return false;
         }
     }
-    return keysObj1.every((key)=>deepEqual(obj1[key], obj2[key]));
+    console.log("asd")
+    // return keysObj1.every((key)=>deepEqual(obj1[key], obj2[key]));
 
 }
 
