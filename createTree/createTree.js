@@ -35,6 +35,5 @@ var data = {
     return ul || '';
   }
 
-//   var container = document.getElementById('container');
   createTree(container, data);
 
