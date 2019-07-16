@@ -1,29 +1,40 @@
-let obj = {
+var data = {
     "Рыбы": {
-        "Форель": {},
-        "Щука": {}
+      "Форель": {},
+      "Щука": {}
     },
 
     "Деревья": {
-        "Хвойные": {
-            "Лиственница": {},
-            "Ель": {}
-        },
-        "Цветковые": {
-            "Берёза": {},
-            "Тополь": {}
-        }
-    }
-};
-
-let container = document.getElementById('container');
-
-function createTree(container, obj) {
-    let keyObj = Object.keyObj(obj)
-    for (let key of keyObj) {
-        console.log(key)
-        return key
+      "Хвойные": {
+        "Лиственница": {},
+        "Ель": {}
+      },
+      "Цветковые": {
+        "Берёза": {},
+        "Тополь": {}
+      }
 
     }
-}
-console.log(createTree(container, obj))
+  };
+  var container = document.createElement('div');  //Создали эл-нт
+//   container.setAttribute('id', 'container')  //Добавили id
+  document.body.insertBefore(container, document.body.firstChild);  //Вставили на страницу перед первым эл-ом в body
+
+  function createTree(container, obj) {  //Функция создания дерева
+    container.innerHTML = createTreeText(obj);  //Расписываем дерево из строки
+  }
+
+  function createTreeText(obj) { // отдельная рекурсивная функция, создаем строку с деревом
+    var li = '';
+    for (var key in obj) {
+      li += '<li>' + key + createTreeText(obj[key]) + '</li>';
+    }
+    if (li) {
+      var ul = '<ul>' + li + '</ul>'
+    }
+    return ul || '';
+  }
+
+//   var container = document.getElementById('container');
+  createTree(container, data);
+
