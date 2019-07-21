@@ -41,9 +41,9 @@ function handler3(event) {
 
 function handler4(event) {
     for (let i = 0; i < trs.length; i++) {
+        trs[i].removeAttribute('class')
+        trs[i].removeAttribute('hidden')
 
-            trs[i].setAttribute('class','null')
-        
     }
 }
 
