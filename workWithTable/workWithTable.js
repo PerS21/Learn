@@ -9,7 +9,7 @@ let trs = tbody.getElementsByTagName('tr');
 function handler(event) {
     for (let i = 0; i < trs.length; i++) {
         if (!trs[i].querySelector('td[data-available]')) {
-            trs[i].setAttribute('class','hidden')
+            trs[i].setAttribute('hidden','true')
         } else {
         let a = (trs[i].querySelector('td[data-available]').getAttribute('data-available'))
         // console.log(a)
