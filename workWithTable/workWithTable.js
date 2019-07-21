@@ -33,12 +33,12 @@ for (let i = 0; i < trs.length; i++) {
     
 // }
 
-// for (let i = 0; i < trs.length; i++) {
-//     let age = trs[i].querySelector('td:nth-child(2)').innerText
-//     if (age < 18) {
-//         trs[i].setAttribute('class','junior')
-//     }
-// }
+for (let i = 0; i < trs.length; i++) {
+    let age = trs[i].querySelector('td:nth-child(2)').innerText
+    if (age < 18) {
+        trs[i].setAttribute('class','junior')
+    }
+}
 
 //   console.log(trs);
 }
