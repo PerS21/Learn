@@ -24,3 +24,7 @@ table, td {
   .unavailable td {
     border: 2px solid red;
   }
+
+  .junior{
+    text-decoration: line-through;
+  }

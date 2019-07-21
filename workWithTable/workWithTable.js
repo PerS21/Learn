@@ -23,12 +23,22 @@ for (let i = 0; i < trs.length; i++) {
     }else trs[i].setAttribute('class','unavailable')
     }
 }
- document.querySelector('.js-teachers').querySelector('tbody').querySelector('tr:nth-child(1)').querySelector('td:nth-child(2)').innerText
-for (let i = 0; i < trs.length; i++) {
-    let gender = trs[i].querySelector('td:nth-child(3)').innerText
-    console.log(gender)
+//  document.querySelector('.js-teachers').querySelector('tbody').querySelector('tr:nth-child(1)').querySelector('td:nth-child(2)').innerText
+// for (let i = 0; i < trs.length; i++) {
+//     let gender = trs[i].querySelector('td:nth-child(3)').innerText
+//     // console.log(gender)
+//     if (gender === 'm') {
+//         trs[i].setAttribute('class','male')
+//     } else trs[i].setAttribute('class','female')
     
-}
+// }
+
+// for (let i = 0; i < trs.length; i++) {
+//     let age = trs[i].querySelector('td:nth-child(2)').innerText
+//     if (age < 18) {
+//         trs[i].setAttribute('class','junior')
+//     }
+// }
 
 //   console.log(trs);
 }
