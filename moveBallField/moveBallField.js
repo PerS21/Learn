@@ -1,5 +1,5 @@
 const field = document.querySelector('div')
-// console.log(field)
+    // console.log(field)
 
 // const marginBody = 8
 // console.log(marginBody)
@@ -8,7 +8,7 @@ const field = document.querySelector('div')
 
 // const button1 = document.querySelectorAll('button')[0];
 // console.log(field)
-field.addEventListener('click',handler);
+field.addEventListener('click', handler);
 
 function handler(event) {
     // console.log(event.clientX)
@@ -20,7 +20,7 @@ function handler(event) {
         ball.style.left = 200 - 20 + 'px'
     }
 
-    if (event.clientX < 36) {
+    if (event.clientX < 38) {
         ball.style.left = 20 + 'px'
     }
 
@@ -29,7 +29,7 @@ function handler(event) {
         ball.style.top = 206 - 76 + 'px'
     }
 
-    if (event.clientY < 70) {
+    if (event.clientY < 78) {
         ball.style.top = 20 + 'px'
     }
 }
