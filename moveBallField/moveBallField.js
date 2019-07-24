@@ -40,7 +40,7 @@ function handler(event) {
     ball.style.top = (event.clientY - field.getBoundingClientRect().top - field.clientTop - (ball.clientHeight / 2)) + 'px'
     ball.style.left = (event.clientX - field.getBoundingClientRect().left - field.clientLeft - (ball.clientHeight / 2)) + 'px'
 
-    if (event.clientX > field.offsetWidth - field.clientLeft - (ball.clientHeight / 2)) {
+    if (event.clientX > field.offsetWidth - field.clientLeft - (ball.clientHeight / 2) + field.getBoundingClientRect().left) {
         ball.style.left = 160 + 'px'
     }
 
