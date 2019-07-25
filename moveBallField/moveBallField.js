@@ -13,8 +13,8 @@ field.addEventListener('click', handler);
 function handler(event) {
     console.log(event.clientX)
     console.log(event.clientY)
-    // ball.style.top = (event.clientY - 56 - (ball.clientHeight / 2)) + 'px'
-    // ball.style.left = (event.clientX - 18 - (ball.clientHeight / 2)) + 'px'
+        // ball.style.top = (event.clientY - 56 - (ball.clientHeight / 2)) + 'px'
+        // ball.style.left = (event.clientX - 18 - (ball.clientHeight / 2)) + 'px'
 
     // let a = field.getBoundingClientRect().top - field.clientTop
     // let b = field.getBoundingClientRect().left - field.clientLeft
@@ -44,16 +44,16 @@ function handler(event) {
         ball.style.left = 160 + 'px'
     }
 
-    if (event.clientX < 38) {
+    if (event.clientX < (field.clientLeft + (ball.clientHeight / 2) + field.getBoundingClientRect().left)) {
         ball.style.left = 0 + 'px'
     }
 
 
-    if (event.clientY > 186) {
-        ball.style.top = 206 - 56 + 'px'
+    if (event.clientY > (field.offsetWidth - (ball.clientHeight / 2)) - 20) {
+        ball.style.top = field.clientHeight - (ball.clientHeight / 2) - field.clientTop - 10 + 'px'
     }
 
-    if (event.clientY < 78) {
+    if (event.clientY < field.offsetTop + field.clientTop + (ball.clientHeight / 2)) {
         ball.style.top = 0 + 'px'
     }
 }
